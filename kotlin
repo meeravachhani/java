@@ -1,0 +1,270 @@
+//1
+//fun main() {
+//    println("name:- meera vachhani")
+//    println("college name:- atmiya university")
+//
+//}
+
+//2
+//fun main()
+//{
+//    println("name:-meera vachhani")
+//    println("address:-rajkot")
+//}
+
+//3
+//fun main()
+//{
+//    print("enter value 1:- ")
+//    var a= readln().toInt()
+//    print("enter value 2:- ")
+//    var b= readln().toInt()
+//    val sum = a + b
+//    println("The sum is: $sum")
+//    val sub=a-b
+//    println("the subtration is:-$sub")
+//    val mul=a*b
+//    println("the multiplication is:-$mul")
+//    val div=a/b
+//    println("the divistion is:-$div")
+//    val mod=a%b
+//    println("the module is:-$mod")
+//
+//}
+
+//4
+//fun main()
+//{
+//
+//    var p=12000
+//    var r=8
+//    var n=12
+//    println("simple intrest:-"+p*r*n/100)
+//}
+
+//5
+//fun main()
+//{
+//    println("enter p:-")
+//    var p= readln().toInt()
+//    println("enter r:-")
+//    var r= readln().toInt()
+//    println("enter n:-")
+//    var n =readln().toInt()
+//    println("enter t:-")
+//    var t =readln().toInt()
+//
+//}
+
+//6
+//fun main()
+//{
+//    println("enter salary:-")
+//    var s= readln().toDouble()
+//    var b=s*0.10
+//    println("$b")
+//}
+
+//7
+//fun main()
+//{
+//    println("kilomiter to meter:-")
+//    println("enter kilomiter:-")
+//    var k= readln().toInt()
+//    var m=k*1000
+//    println("meter:- $m")
+//}
+
+//8
+
+//fun main()
+//{
+//    println("enter first city:-")
+//    var first= readln().toInt()
+//
+//    var m=first*1000
+//    var i=first*39370.1
+//    var f=first*3280.84
+//    var c=first*100000
+//    println("$m")
+//    println("$i")
+//    println("$f")
+//    println("$c")
+//}
+
+
+
+
+
+//fun main() {
+//    for (i in 1..5) {
+//        println(i)
+//    }
+//}
+
+
+
+
+//fun main() {
+//    for (i in 5 downTo 1) {
+//        println(i)
+//    }
+//}
+
+
+
+//fun main()
+//{
+//    var a="hello"
+//    var b=""
+//    for(i in a.length-1 downTo 0)
+//    {
+//        b+=a[i]
+//    }
+//println(a)
+//    println(b)
+//}
+
+
+//this <u>is</u> not a <u>gardan.</u>
+//fun main() {
+//    println("enter string")
+//    val str = readln()
+//    val parts = str.split(Regex("<[^>]*>")).joinToString (" ").uppercase()
+////    for (part in parts) println(part)
+//println("$parts")
+//}
+
+fun main() {
+    println("Enter a number:")
+    val input = readLine() ?: ""
+    val number = input.toIntOrNull()
+
+    if (number == null) {
+        println("Please enter a valid number.")
+        return
+    }
+
+    val originalNumber = input
+    var reverseNumber = 0
+    var temp = number
+
+    while (temp > 0) {
+        val digit = temp % 10
+        reverseNumber = reverseNumber * 10 + digit
+        temp /= 10
+    }
+
+    if (originalNumber === reverseNumber) {
+        println("$originalNumber is a palindrome number.")
+    } else {
+        println("$originalNumber is not a palindrome number.")
+    }
+}
+
+
+
+
+
+//fun main() {
+//    print("Enter distance in kilometers: ")
+//    val km = readLine()!!.toDouble()
+//
+//    val meters = km * 1000
+//
+//    println("$km kilometers is equal to $meters meters.")
+//}
+
+
+
+////total and average
+//fun main() {
+//    var total = 0.0
+//    println("enter number")
+//    val numberCount = readln().toInt()
+//
+//    for (i in 1..numberCount) {
+//        print("Enter number $i: ")
+//        val number = readLine()!!.toDouble()
+//        total += number
+//    }
+//
+//    val average = total / numberCount
+//    println("Total: $total")
+//    println("Average: $average")
+//}
+
+
+
+
+//fun main() {
+//    println("Enter first number:")
+//    val num1 = readLine()!!.toInt()
+//    println("Enter second number:")
+//    val num2 = readLine()!!.toInt()
+//    println("Enter operation (+, -, *, /):")
+//    val operator = readLine()!!
+//
+//    var result: Int
+//    if (operator == "+")
+//    {
+//        result = num1 + num2
+//        println("Result: $result")
+//    }
+//    else if (operator == "-")
+//    {
+//        result = num1 - num2
+//        println("Result: $result")
+//    }
+//    else if (operator == "*")
+//    {
+//        result = num1 * num2
+//        println("Result: $result")
+//    }
+//    else if (operator == "/")
+//    {
+//            result = num1 / num2
+//            println("Result: $result")
+//
+//    }
+//    else
+//    {
+//        println("Invalid operator entered.")
+//    }
+//}
+
+
+
+
+//fun main() {
+//    println("Enter first number:")
+//    val num1 = readLine()!!.toInt()
+//
+//    println("Enter second number:")
+//    val num2 = readLine()!!.toInt()
+//
+//    println("Choose operation:")
+//    println("1: Addition")
+//    println("2: Subtraction")
+//    println("3: Multiplication")
+//    println("4: Division")
+//    val choice = readLine()!!.toInt()
+//
+//    val result = when (choice) {
+//        1 -> num1 + num2
+//        2 -> num1 - num2
+//        3 -> num1 * num2
+//        4 -> if (num2 != 0) num1 / num2 else {
+//            println("Error: Division by zero is not allowed.")
+//            null
+//        }
+//        else -> {
+//            println("Invalid choice.")
+//            null
+//        }
+//    }
+//
+//    if (result != null) {
+//        println("Result: $result")
+//    }
+//}
